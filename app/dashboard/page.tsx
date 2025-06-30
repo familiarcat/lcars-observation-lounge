@@ -1,20 +1,19 @@
-import React from 'react';
-import LcarsShell from '@/components/lcars/LcarsShell';
-import LcarsSidebar from '@/components/lcars/LcarsSidebar';
-import LcarsContent from '@/components/lcars/LcarsContent';
-import LcarsTitleBar from '@/components/lcars/LcarsTitleBar';
-import LcarsPanel from '@/components/lcars/LcarsPanel';
+// app/dashboard/page.tsx
+"use client";
+import LcarsShell from "@/components/lcars/LcarsShell";
+import LcarsShellGrid from "@/components/lcars/LcarsShellGrid";
+import LcarsPanel from "@/components/lcars/LcarsPanel";
+import LcarsButton from "@/components/lcars/LcarsButton";
 
 export default function DashboardPage() {
   return (
     <LcarsShell>
-      <LcarsSidebar />
-      <LcarsContent>
-        <LcarsTitleBar title="Dashboard Overview" />
+      <LcarsShellGrid>
         <LcarsPanel>
-          <p className="text-lcars-peach">Welcome to the LCARS Observation Lounge.</p>
+          <h1 className="text-4xl font-bold mb-4">Welcome to the LCARS Dashboard</h1>
+          <LcarsButton label="Begin Mission" onClick={() => alert("Mission initiated")} />
         </LcarsPanel>
-      </LcarsContent>
+      </LcarsShellGrid>
     </LcarsShell>
   );
 }

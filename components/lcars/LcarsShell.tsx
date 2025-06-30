@@ -1,15 +1,9 @@
-import React, { ReactNode } from "react";
-import LcarsSidebar from "./LcarsSidebar";
+import { ReactNode } from "react";
 
-type Props = {
-  children: ReactNode;
-};
-
-export default function LcarsShell ({ children }: Props) { 
+export default function LcarsShell({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen flex bg-black text-white font-lcars">
-      <LcarsSidebar />
-      <main className="flex-1 p-4 overflow-y-auto">{children}</main>
+    <div className="min-h-screen bg-lcars-black text-white p-4 rounded-tl-3xl rounded-br-3xl">
+      <div className="max-w-7xl mx-auto">{children}</div>
     </div>
   );
 }

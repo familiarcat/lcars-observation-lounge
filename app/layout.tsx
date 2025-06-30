@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={orbitron.className}>
+      <body className={`${orbitron.className} bg-lcars-black text-lcars-peach`}>
         <LcarsShellGrid>{children}</LcarsShellGrid>
       </body>
     </html>

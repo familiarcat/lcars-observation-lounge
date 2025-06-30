@@ -1,15 +1,9 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
-type Props = {
-  title?: string;
-  children: ReactNode;
-};
-
-export default function LcarsPanel ({ title, children }: Props) {
-  return(
-    <section className="border-4 border-orange-400 p-4 m-4 rounded-lg bg-gray-800">
-    <h2 className="text-orange-400 font-bold text-lg mb-2">{title}</h2>
-    <div>{children}</div>
-  </section>
-  )
+export default function LcarsPanel({ children }: { children: ReactNode }) {
+  return (
+    <div className="p-4 bg-lcars-blue text-black rounded-lg shadow-md">
+      {children}
+    </div>
+  );
 }
